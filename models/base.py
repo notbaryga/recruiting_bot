@@ -22,5 +22,5 @@ class Base():
         self.cursor.execute(f'SELECT role FROM users WHERE id = (?)', (id,))
         return self.cursor.fetchone()
 
-base = Base('models/database.db')
+base = Base('//models/database.db')
 #print(base.get_user(789))
