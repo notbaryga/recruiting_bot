@@ -1,5 +1,7 @@
 import sqlite3
+from dataclasses import dataclass
 
+#@dataclass
 class Base():
     def __init__(self, way):
         self.way = way
@@ -22,5 +24,5 @@ class Base():
         self.cursor.execute(f'SELECT role FROM users WHERE id = (?)', (id,))
         return self.cursor.fetchone()
 
-base = Base('//models/database.db')
-#print(base.get_user(789))
+base1 = Base('C:\\Users\\lyudmila churina\\recruiting_bot\models\database.db')
+# print(base.get_user(7890))
